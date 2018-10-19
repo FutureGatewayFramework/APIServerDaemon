@@ -1,3 +1,5 @@
+**This repository has been frozen at [INDIGO-dc](https://www.indigo-datacloud.eu) project deadline, except for all those changes and fixes related to the stability. New developments are available at the [new repository](https://github.com/FutureGatewayFramework)**
+
 # APIServer Daemon
 [![Travis](http://img.shields.io/travis/FutureGateway/geAPIServer/master.png)](https://travis-ci.org/FutureGateway/geAPIServer)
 [![License](https://img.shields.io/github/license/FutureGateway/geAPIServer.svg?style?flat)](http://www.apache.org/licenses/LICENSE-2.0.txt)
