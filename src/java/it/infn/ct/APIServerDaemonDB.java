@@ -569,7 +569,7 @@ public class APIServerDaemonDB {
                                 resultSet.getInt("target_id"),
                                 resultSet.getString("target"),
                                 resultSet.getString("action"),
-                                resultSet.getString("status"),
+                                "PROCESSING",
                                 resultSet.getString("target_status"),
                                 resultSet.getInt("retry"),
                                 resultSet.getTimestamp("creation"),
