@@ -17,10 +17,10 @@ This service is the FutureGateway component that phisically execute tasks on top
 
 # Dependencies
 
-Please install csgf/grid-and-cloud-engine:
+You need to install csgf/grid-and-cloud-engine before using APIServerDaemon:
 
 ```sh
-git clone https://github.com/tzok/grid-and-cloud-engine.git
+git clone -b FutureGateway https://github.com/tzok/grid-and-cloud-engine.git
 cd grid-and-cloud-engine
 mvn install
 ```
