@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="APPENDER_OUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<!-- Print the date in ISO 8601 format -->
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5p %c{1} %x - %m%n" />
+		</layout>
+	</appender>
+	<appender name="APPENDER_FILE" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="${APISrvDaemonPath}WEB-INF/logs/GridEngineLog.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<param name="Append" value="true"/>
+		<!--param name="Threshold" value="DEBUG" /-->
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} [%t] %-5p %c{1} %x - %m%n" />
+		</layout>
+	</appender>
+	<appender name="ASYNCH" class="org.apache.log4j.AsyncAppender">
+		<appender-ref ref="APPENDER_FILE" />
+                <!-- Only FILE
+		<appender-ref ref="APPENDER_OUT" />
+                -->
+	</appender>
+	<category name="it.infn.ct.GridEngine" additivity="false">
+		<priority value="debug" />
+		<appender-ref ref="ASYNCH" />
+	</category>
+</log4j:configuration>

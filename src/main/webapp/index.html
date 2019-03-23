@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>APIServerDaemon</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+       <![endif]-->        
+    </head>
+    <body>
+        <h1>APIServerDaemon</h1>
+        <p>The APIServerDaemon executes commands prepared by the FutureGateway APIServer front-end.
+           The front-end is responsible to get user requests from its REST interface and prepares 
+           the task execution for the APIServer which physically executes the task. 
+           The APIServer daemon retrieves the list of tasks to execute from a database table. 
+           Each task may involve a different executor identified by the task queue field 'Target'.
+        </p>
+        <h2>Actions</h2>
+        <p>Below a list of actions that could be performed by the APIServerDaemon web interface.
+        <ul>
+            <li>View current <a href="/APIServerDaemon/configuration">configuration</a></li>
+            <li>Show server <a href="/APIServerDaemon/tbd.jsp">statistics</a></li>
+        </ul>
+        </p>
+    </body>
+</html>
