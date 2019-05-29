@@ -437,8 +437,9 @@ public class APIServerDaemonDB {
                     + "      ,check_ts" + LS
                     + "      ,action_info" + LS
                     + "from as_queue" + LS
-                    + "where status = 'PROCESSING'" + LS
-                    + "   or status = 'PROCESSED'" + LS
+                    + "where creation <= now()" + LS
+                    + "  and (status = 'PROCESSING'" + LS
+                    + "       or status = 'PROCESSED')" + LS
                     + "order by check_ts asc" + LS
                     + "limit ?;";
             preparedStatement = connect.prepareStatement(sql);
@@ -553,7 +554,9 @@ public class APIServerDaemonDB {
                     + "      ,check_ts" + LS
                     + "      ,action_info" + LS
                     + "from as_queue" + LS
-                    + "where status = 'QUEUED'" + LS
+                    + "where creation <= now()" + LS
+                    + "  and status = 'QUEUED'" + LS
+                    + "  and status = 'QUEUED'" + LS
                     + "order by last_change asc" + LS
                     + "limit ?" + LS
                     + ";";
