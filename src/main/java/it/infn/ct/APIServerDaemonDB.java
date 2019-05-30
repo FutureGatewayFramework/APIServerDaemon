@@ -556,7 +556,6 @@ public class APIServerDaemonDB {
                     + "from as_queue" + LS
                     + "where creation <= now()" + LS
                     + "  and status = 'QUEUED'" + LS
-                    + "  and status = 'QUEUED'" + LS
                     + "order by last_change asc" + LS
                     + "limit ?" + LS
                     + ";";
