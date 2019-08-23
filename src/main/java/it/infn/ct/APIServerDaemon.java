@@ -252,4 +252,14 @@ public class APIServerDaemon {
 
         return asdDB.getDBVer();
     }
+
+    /**
+     * Entrypoint for APIServerDaemon.
+     *
+     * @param args Argument list (not currently used)
+     */
+    public static void main(final String[] args) {
+        APIServerDaemonLoop asdLoop = new APIServerDaemonLoop();
+        asdLoop.run();
+    }
 }
