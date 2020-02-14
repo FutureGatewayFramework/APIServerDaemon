@@ -11,11 +11,19 @@
     <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
   </properties>
 
-    <repositories>
+  <repositories>
+		          <!--  Added for INDIGO-DC Jenkins jobs -->
+     <repository>
+     <id>IN2P3</id>
+        <url>http://maven.in2p3.fr</url>
+     </repository>
+
+<!--
     <repository>
       <id>maven.in2p3.fr</id>
       <url>http://maven.in2p3.fr</url>
     </repository>
+
     <repository>
       <id>mulesoft-releases</id>
       <name>MuleSoft Repository</name>
@@ -28,6 +36,7 @@
       <url>http://repository.mulesoft.org/snapshots/</url>
       <layout>default</layout>
     </repository>
+-->
   </repositories>
 
   <dependencies>
@@ -54,12 +63,16 @@
       <groupId>it.infn.ct</groupId>
       <artifactId>grid-and-cloud-engine-threadpool</artifactId>
       <version>0.0.1-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/../grid-and-cloud-engine/grid-and-cloud-engine-threadpool/target/grid-and-cloud-engine-threadpool-0.0.1-SNAPSHOT.jar</systemPath>
     </dependency>
 
     <dependency>
       <groupId>it.infn.ct</groupId>
       <artifactId>grid-and-cloud-engine_M</artifactId>
       <version>0.0.1-SNAPSHOT</version>
+      <scope>system</scope>
+      <systemPath>${project.basedir}/../grid-and-cloud-engine/grid-and-cloud-engine_M/target/grid-and-cloud-engine_M-0.0.1-SNAPSHOT.jar</systemPath>
     </dependency>
 
     <dependency>
