@@ -155,14 +155,15 @@ public class APIServerServletListener implements ServletContextListener {
                 connPools[i] = ds.getConnection();
                 System.out.println("PERFECT: " + currentPool + " was ok");
             } catch (Exception e) {
-                System.err.println("WARNING: " + currentPool + " failed" + LS
-                        + e.toString());
+                System.err.println("WARNING: " + currentPool + " failed" + LS);
+                e.printStackTrace(System.err);
             } finally {
                 try {
                     connPools[i].close();
                 } catch (Exception e) {
                     System.err.println("WARNING: " + currentPool
-                            + " failed to close" + LS + e.toString());
+                            + " failed to close" + LS);
+                    e.printStackTrace(System.err);
                 }
             }
         }
