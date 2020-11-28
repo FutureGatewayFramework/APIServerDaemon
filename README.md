@@ -14,3 +14,13 @@ This service is the FutureGateway component that phisically execute tasks on top
    [specs]: <http://docs.csgfapis.apiary.io/#reference/v1.0/application/create-a-task>
    [CSGF]: <https://www.catania-science-gateways.it>
    [fgAPIServer]: <https://github.com/FutureGateway/fgAPIServer>
+
+# Dependencies
+
+You need to install csgf/grid-and-cloud-engine before using APIServerDaemon:
+
+```sh
+git clone -b FutureGateway https://github.com/tzok/grid-and-cloud-engine.git
+cd grid-and-cloud-engine
+mvn install
+```
